@@ -1,0 +1,22 @@
+﻿@model Hospital_Management_System.Models.Schedule
+
+@{
+    ViewBag.Title = "DeleteSchedule";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Takvimi Sil</h2>
+
+<h3>Silmek İstediğinize emin misiniz?</h3>
+<div>
+    <hr />
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Geri Dön", "ListOfSchedules")
+        </div>
+    }
+</div>

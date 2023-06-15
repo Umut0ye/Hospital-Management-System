@@ -1,0 +1,35 @@
+﻿@model Hospital_Management_System.Models.Department
+
+@{
+    ViewBag.Title = "DeleteDepartment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Bölümler</li>
+        <li class="active">Bölümü Sil</li>
+    </ol>
+</div>
+
+<h2>Bölümü Sil</h2>
+<h3>Silmek istediğinize emin misiniz?</h3>
+
+<div>   
+    <hr/>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger"/> |
+            @Html.ActionLink("Listeye Geri Dön", "DepartmentList")
+        </div>
+    }
+</div>

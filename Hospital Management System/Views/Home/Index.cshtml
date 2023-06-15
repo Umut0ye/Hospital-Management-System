@@ -1,0 +1,177 @@
+﻿@using System.Web.UI.WebControls
+@using Hospital_Management_System.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+<header id="Home">
+    <nav>
+        <div class="row">
+            <img src="~/Content/Layout/resources/img/logo-white.jpg" alt="HMS logo" class="logo">
+            <img src="~/Content/Layout/resources/img/logo.jpg" alt="HMS logo" class="logo-black">
+            <ul class="main-nav js-main-nav">
+                <li><a href="#Home">Anasayfa</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li><a href="@Url.Action("Register", "Account")">Kayıt Ol</a></li>
+                <li><a href="@Url.Action("Login", "Account")">Giriş Yap</a></li>
+            </ul>
+            <a class="mobile-nav-icon js-mobile-nav-icon"><i class="ion-ios-menu"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Hastane Yonetim<br> Sistemi.</h1>
+        <br>
+        <a class="btn btn-ghost js-scroll-to-start" href="#">Daha Fazlası</a>
+    </div>
+</header>
+
+<section class="section-features js-section-features" id="services">
+
+    <div class="row">
+        <h2>Services</h2>
+        <p class="long-copy">Hastane Yönetim Sistemine Hoşgeldiniz.Sizin için en iyisini başarmaya çalışıyoruz.</p>
+    </div>
+    <div class="row js-wp-1">
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-medkit"></i>
+            <h3>Acil Servis</h3>
+            <p>7/24 Acil Servislerimizde Uzman Doktor Bulunmaktadır.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-call"></i>
+            <h3>Acil Servis Numarası</h3>
+            <p>05462701332 Nolu Acil Servis Numaramız.İletişime Geçmeniz İçin 7/24 Aktiftir.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-car"></i>
+            <h3>Ambulans</h3>
+            <p>Ambulans Hizmetimiz 70km'ye kadar hizmet vermektedir.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-checkmark-circle-outline"></i>
+            <h3>Randevu</h3>
+            <p>Online Randevu Sistemiz Sayesinde Programınızı Kendiniz Ayarlıyabilirsiniz</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-steps" id="about">
+    <meta charset="UTF-8">
+    <div class="row">
+        <h2>        Misyon Ve Vizyonumuz</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-2 step-box">
+            <img src="~/Content/Layout/resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen js-wp-2">
+        </div>
+        <div class="col span-1-of-2 step-box">
+            <div class="works-step">
+                <div>1</div>
+                <p>Hastane Yönetim Sistemi (HS) her gün tüm hastalara açıktır ve temel tıbbi bakım ile son teknoloji ilaçları sağlar. </p>
+            </div>
+            <div class="works-step">
+                <div>2</div>
+                <p>Akademik bilgimizi, çok çeşitli sağlık sorunlarını tedavi etmek, kişisel bir dokunuş yapmak ve son derece uzmanlaşmış ve güncel araştırmaları kullanmak için kullanıyoruz.</p>
+            </div>
+            <div class="works-step">
+                <div>3</div>
+                <p>
+                    Nesiller boyunca sağlık hizmetlerinin geleceğini yenileyecek ve tanımlayacağız ve
+                    sağlık hizmetleri için tüketicinin ilk tercihi olacağız.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-cities" id="cities">
+    <div class="row">
+        <h2>Şuan bulunduğumuz iller </h2>
+    </div>
+    <div class="row js-wp-3">
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/ist.jpeg" alt="İstanbul"
+            <h3>İstanbul</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_İstanbul</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/ank.jpg" alt="İstanbul">
+            <h3>Ankara</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_Ankara</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/izmr.jpg" alt="İstanbul">
+            <h3>İzmir</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_İzmir</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/antt.jpg" alt="İstanbul">
+            <h3>Antalya</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">Antalya</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-testimonials" id="reviews">
+    <div class="row">
+        <h2>Müşterilerimizin Hakkımızda Düşünceleri</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3">
+            <blockquote>HMS Harika Bir Sistem</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-1.jpg" alt="first-customer">Özgür Demirtaş</cite>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>HMS Harika Bir Sistem</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-2.jpg" alt="first-customer">Emre Kaya</cite>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>HMS Harika Bir Sistem</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-3.jpg" alt="first-customer">Taha Yıldırım</cite>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Gelecek</a></li>
+                <li><a href="#">IOS uygulaması</a></li>
+                <li><a href="#">Andriod Uygulaması</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-logo-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-logo-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-logo-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-logo-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p> Copyright &copy; @DateTime.Now.Year by HMS.All rights reserved.</p>
+    </div>
+</footer>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,34 @@
+﻿@model Hospital_Management_System.Models.Doctor
+
+@{
+    ViewBag.Title = "DeleteDoctor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Doktor</li>
+        <li class="active">Doktoru Sil</li>
+    </ol>
+</div>
+
+<h2>Doktoru Sil</h2>
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <hr />
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Geri Dön", "ListOfDoctors")
+        </div>
+    }
+</div>

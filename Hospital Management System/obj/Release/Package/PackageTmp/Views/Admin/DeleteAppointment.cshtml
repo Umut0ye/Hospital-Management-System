@@ -1,0 +1,30 @@
+﻿@model Hospital_Management_System.Models.Appointment
+
+@{
+    ViewBag.Title = "DeleteAppointment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Randevuyu Sil</h2>
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <hr />
+    
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @if (Model.Status)
+            {
+                @Html.ActionLink("Listeye Geri Dön", "ListOfAppointments")
+            }
+            else
+            {
+                @Html.ActionLink("Listeye Geri Dön", "PendingAppointments")
+            }
+        </div>
+    }
+</div>

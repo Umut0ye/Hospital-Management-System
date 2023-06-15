@@ -1,0 +1,34 @@
+﻿@model Hospital_Management_System.Models.Ambulance
+
+@{
+    ViewBag.Title = "DeleteAmbulance";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Ambulans</li>
+        <li class="active">Ambulans Sil</li>
+    </ol>
+</div>
+
+<h2>Ambulans Sil</h2>
+
+<h3>Silmek İstediğinize Emin Misiniz</h3>
+<div>
+    <hr />
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Geri Dön", "ListOfAmbulances")
+        </div>
+    }
+</div>
